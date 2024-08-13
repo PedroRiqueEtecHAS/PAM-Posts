@@ -4,21 +4,22 @@
              x:Class="ExemploHttp.View.PostsView"
              Title="PostsView">
     <VerticalStackLayout>
+        <Button Command="{Binding getPostCommand}" Text="Carregar postagens"></Button>
         <ScrollView>
-            <CollectionView>
+            <CollectionView ItemsSource="{Binding Posts}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <VerticalStackLayout>
-                            
-                            <Label 
+                            <ScrollView>
+                                <Label 
                                 Text="{Binding Title}" />
 
-                            <Label 
+                                <Label 
                                 Text="{Binding Body}" />
-
+                            </ScrollView>
                         </VerticalStackLayout>
                     </DataTemplate>
-                </CollectionView.ItemTemplate>
+                </CollectionView.ItemTemplate >
             </CollectionView>
             
             
