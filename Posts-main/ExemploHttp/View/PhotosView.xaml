@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExemploHttp.View.PhotosView"
+             Title="PhotosView">
+    <VerticalStackLayout>
+        <Button Command="{Binding getPhotoCommand}" Text="Carregar postagens"></Button>
+        <ScrollView>
+            <CollectionView ItemsSource="{Binding Photos}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <ScrollView>
+                            <VerticalStackLayout>
+                                
+                                <Label  Text="{Binding Title}"/>
+                               
+
+                                <Label  Text="{Binding url}"/>
+
+                              
+
+                            </VerticalStackLayout>
+                        </ScrollView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
+    </VerticalStackLayout>
+</ContentPage>

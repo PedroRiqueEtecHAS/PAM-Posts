@@ -30,11 +30,11 @@ namespace ExemploHttp.Services
         {
 		
 			Uri uri = new Uri("https://jsonplaceholder.typicode.com/posts");
-			Uri uri2 = new Uri("https://jsonplaceholder.typicode.com/photos");
 			try
 			{
 				HttpResponseMessage response = await client.GetAsync(uri);
-				if (response.IsSuccessStatusCode)
+
+                if (response.IsSuccessStatusCode)
 				{
 					string content = await response.Content.ReadAsStringAsync();
 					posts = JsonSerializer.Deserialize<ObservableCollection<Post>>(content, serializerOptions);

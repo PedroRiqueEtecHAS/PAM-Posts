@@ -9,8 +9,10 @@
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:PostsView}"
+        ContentTemplate="{DataTemplate local:PhotosView}"
         Route="MainPage" />
+    
+    
 
     <TabBar>
        
