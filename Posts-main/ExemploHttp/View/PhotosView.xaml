@@ -11,14 +11,10 @@
                     <DataTemplate>
                         <ScrollView>
                             <VerticalStackLayout>
-                                
                                 <Label  Text="{Binding Title}"/>
-                               
+
 
                                 <Label  Text="{Binding url}"/>
-
-                              
-
                             </VerticalStackLayout>
                         </ScrollView>
                     </DataTemplate>
